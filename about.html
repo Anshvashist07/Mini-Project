@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Digital Marketing Experts</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="switcher.css">
+      <style type="text/css">
+          body.dark-theme .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/about.jpg");
+    }
+
+    body.dark-theme .about-card i , body.dark-theme .team-member .member-info p , body.dark-theme .stat-item .stat-number{
+        color: #fdc304;
+    }
+
+
+    /*    whatsapp design start*/
+
+
+/* Font Awesome icon ka size aur color */
+.whatsapp-icon i {
+    font-size: 40px;
+    color: #25D366;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Positioning the icon at the bottom right */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Hover effect for the icon */
+.whatsapp-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* For responsiveness: Adjust the icon size on smaller screens */
+@media (max-width: 768px) {
+    .whatsapp-icon i {
+        font-size: 30px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-icon i {
+        font-size: 25px;
+        padding: 6px;
+    }
+}
+
+
+
+
+
+/*    whatsapp design end*/
+      </style>
+</head>
+<body>
+
+        <!-- whatsapp icon  start-->
+
+
+<a href="https://wa.me/917011013046?text=Hello%20I%20need%20support" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+    <!-- whatsapp icon end  -->
+
+     <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch" class="theme-switch">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <span class="theme-ball"></span>
+        </button>
+    </div>
+
+      <!-- Header Section -->
+  <section class="header">
+    <nav>
+      <div class="logo_section">
+        <a href="index.html">
+        <img src="assets/dif_logo.png" alt="logo" class="logo1">
+        <img src="assets/dif_logo.png" alt="logo"></a>
+      </div>
+
+      <div class="menu" id="menu">
+        <ul class="nav1">
+          <li><a href="index.html">Home</a><br><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a><br><a href="about.html">About</a></li>
+          <li><a href="service.html">Service</a><br><a href="service.html">Service</a></li>
+          <li><a href="blog.php">Blog</a><br><a href="blog.php">Blog</a></li>
+          <li><a href="contact.html">Contact</a><br><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+        <section class="about-hero">
+        <div class="hero-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container">
+            <h1>About Us</h1>
+            <p>We're a passionate team of digital marketers dedicated to helping businesses grow through innovative strategies and data-driven solutions.</p>
+        </div>
+    </section>
+
+  </section>
+  <!-- header section end -->
+
+
+
+
+    
+    <section class="about-content">
+        <div class="container">
+            <div class="section-title">
+                <h2>Who We Are</h2>
+                <p>Founded in 2023, we've grown from a small startup to a leading digital marketing agency with clients across the globe.</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses of all sizes with cutting-edge digital marketing solutions that deliver measurable results and sustainable growth.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted digital marketing partner for businesses worldwide, recognized for our innovation and exceptional results.</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>Integrity, creativity, data-driven decisions, and client success are at the core of everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="team-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The brilliant minds behind our success stories</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="">
+                    </div>
+                    <div class="member-info">
+                        <!-- <h3>Alex Johnson</h3> -->
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="" alt="Team Member">
+                    </div>
+                    <div class="member-info">
+                        <!-- <h3>Sarah Williams</h3> -->
+                        <p>Marketing Director</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="" alt="Team Member">
+                    </div>
+                    <div class="member-info">
+                        <!-- <h3>Michael Chen</h3> -->
+                        <p>Manager</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="" alt="Team Member">
+                    </div>
+                    <div class="member-info">
+                        <!-- <h3>Emily Rodriguez</h3> -->
+                        <p>Human Resource (HR)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Happy Client</h2>
+                <p>Our impact in the digital marketing world</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="clientCount">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="projectCount">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="growthCount">0</div>
+                    <div class="stat-label">Avg. Growth</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="teamCount">0</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer Section -->
+ <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Digital Idea Force: Your partner in growth and innovation. Crafting strategies that deliver measurable success.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../service.html">Services</a></li>
+          <li><a href="../blog.php">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <a href="mailto:info@digitalideaforce.com?subject=Hello&body=I wanted to get in touch." class="p">info@digitalideaforce.com</a>
+        <a href="mailto:support@digitalideaforce.com?subject=Hello&body=I wanted to get in touch." class="p">support@digitalideaforce.com</a>
+        <a href="https://wa.me/918527161896?text=Hiiii....." target="_blank" class="p1">+91-8527161896</a>
+        <a href="https://wa.me/918882534253?text=Hiiii....." target="_blank" class="p1">+91-8882534253</a>
+        <br>
+        <a href="https://wa.me/918920922884?text=Hiiii....." target="_blank" class="p1">+91-8920922884</a>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/digital_idea_force/?next=%2F"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61557531185649"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/@DIGITALIDEAFORCE"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/company/104130863/admin/dashboard/"><i class="fab fa-linkedin-in"></i></a>
+    </div>    <div class="footer-bottom">
+      <p>&copy; 2025 Digital Idea Force. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="theme.js"></script>
+    <script src="humberger.js"></script>
+    
+    <script>
+
+
+        // Improved Counter Animation for Stats
+function animateCounters() {
+    const counters = document.querySelectorAll('.stat-number');
+    const duration = 2000; // Total animation duration in ms
+    const startTime = performance.now();
+    
+    function updateCounters(currentTime) {
+        const elapsedTime = currentTime - startTime;
+        const progress = Math.min(elapsedTime / duration, 1); // 0 to 1
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const start = 0;
+            const currentValue = Math.floor(progress * (target - start) + start);
+            if(progress <1){
+            counter.innerText = currentValue.toLocaleString(); // Adds commas for thousands
+
+            }
+            else{
+                if(counter.id === 'growthCount'){
+            counter.innerText = currentValue.toLocaleString() + '%'; // Adds commas for thousands
+
+                }
+                else if(counter.id === 'teamCount'){
+            counter.innerText = currentValue.toLocaleString(); // Adds commas for thousands
+
+                }
+                else{
+            counter.innerText = currentValue.toLocaleString() + '+'; // Adds commas for thousands
+
+                }
+            }
+        });
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateCounters);
+        }
+    }
+    
+    requestAnimationFrame(updateCounters);
+}
+
+// Set target values
+document.getElementById('clientCount').setAttribute('data-target', '100');
+document.getElementById('projectCount').setAttribute('data-target', '400');
+document.getElementById('growthCount').setAttribute('data-target', '300');
+document.getElementById('teamCount').setAttribute('data-target', '14');
+
+// Start counters when stats section is in view
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector('.stats-section'));
+    </script>
+</body>
+</html>

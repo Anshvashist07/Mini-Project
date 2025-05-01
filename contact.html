@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="contact.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  	<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"
+/>
+ <link rel="stylesheet" type="text/css" href="switcher.css">
+ <style type="text/css">
+          body.dark-theme .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/contact.jpg");
+    }
+
+    /*    whatsapp design start*/
+
+
+/* Font Awesome icon ka size aur color */
+.whatsapp-icon i {
+    font-size: 40px;
+    color: #25D366;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Positioning the icon at the bottom right */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Hover effect for the icon */
+.whatsapp-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* For responsiveness: Adjust the icon size on smaller screens */
+@media (max-width: 768px) {
+    .whatsapp-icon i {
+        font-size: 30px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-icon i {
+        font-size: 25px;
+        padding: 6px;
+    }
+}
+
+
+
+
+
+/*    whatsapp design end*/
+      </style>
+</head>
+<body>
+
+        <!-- whatsapp icon  start-->
+
+
+<a href="https://wa.me/917011013046?text=Hello%20I%20need%20support" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+    <!-- whatsapp icon end  -->
+  <!-- dark light mode option start -->
+
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" class="theme-switch">
+
+
+
+    <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="theme-ball"></span>
+  </button>
+  </div>
+
+  <!-- dark light mode option end -->
+
+
+  <!-- Header Section -->
+  <section class="header">
+    <nav>
+      <div class="logo_section">
+        <a href="index.html">
+        <img src="assets/dif_logo.png" alt="logo" class="logo1">
+        <img src="assets/dif_logo.png" alt="logo"></a>
+      </div>
+
+      <div class="menu" id="menu">
+        <ul class="nav1">
+          <li><a href="index.html">Home</a><br><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a><br><a href="about.html">About</a></li>
+          <li><a href="service.html">Service</a><br><a href="service.html">Service</a></li>
+          <li><a href="blog.php">Blog</a><br><a href="blog.php">Blog</a></li>
+          <li><a href="contact.html">Contact</a><br><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <h1>Let's Grow Your Business</h1>
+            <p>Get in touch with our digital marketing experts. We're here to help you create a powerful online presence and drive results for your business.</p>
+    </div>
+  </section>
+
+  <!-- header sectio  end -->
+
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-inbox"></i> info@digitalideaforce.com</li>
+                        <li><i class="fas fa-inbox"></i> support@digitalideaforce.com</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> Call Us</h3>
+                    <ul class="contact-details">
+                        <li><i class="fa-brands fa-whatsapp"></i>+91 8527161896</li>
+                        <li><i class="fa-brands fa-whatsapp"></i>+91 8882534253</li>
+                        <li><i class="fa-brands fa-whatsapp"></i>+91 8920922884</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-building"></i> 05,Indra Park, Sai Baba Mandir </li>
+                        <li><i class="fas fa-city"></i> Near Nangli Metro Station, Najafgrah, New Delhi-110043</li>
+                    </ul>
+                </div>
+                
+                <div class="info-card">
+                    <h3><i class="fas fa-share-alt"></i> Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/digital_idea_force/?next=%2F"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61557531185649"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@DIGITALIDEAFORCE"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/company/104130863/admin/dashboard/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm" class="contact__form" method="post" action="wa.php">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Select Your State</label>
+                        <select id="service" name="service">
+                                  <option value="Delhi">Delhi</option>
+                              <option value="Andhra Pradesh">Andhra Pradesh</option>
+                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                              <option value="Assam">Assam</option>
+                              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                              <option value="Bihar">Bihar</option>
+                              <option value="Chhattisgarh">Chhattisgarh</option>
+                              <option value="Chandigarh">Chandigarh</option>
+                              <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Gujarat">Gujarat</option>
+                              <option value="Haryana">Haryana</option>
+                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                              <option value="Jharkhand">Jharkhand</option>
+                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                              <option value="Karnataka">Karnataka</option>
+                              <option value="Kerala">Kerala</option>
+                              <option value="Lakshadweep">Lakshadweep</option>
+                              <option value="Ladakh">Ladakh</option>
+                              <option value="Madhya Pradesh">Madhya Pradesh</option>
+                              <option value="Maharashtra">Maharashtra</option>
+                              <option value="Manipur">Manipur</option>
+                              <option value="Meghalaya">Meghalaya</option>
+                              <option value="Mizoram">Mizoram</option>
+                              <option value="Nagaland">Nagaland</option>
+                              <option value="Odisha">Odisha</option>
+                              <option value="Punjab">Punjab</option>
+                              <option value="Puducherry">Puducherry</option>
+                              <option value="Rajasthan">Rajasthan</option>
+                              <option value="Sikkim">Sikkim</option>
+                              <option value="Tamil Nadu">Tamil Nadu</option>
+                              <option value="Telangana">Telangana</option>
+                              <option value="Tripura">Tripura</option>
+                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                              <option value="Uttarakhand">Uttarakhand</option>
+                              <option value="West Bengal">West Bengal</option>
+
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
+                    
+                    <div id="successMessage" class="success-message">
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.5160769587096!2d76.99787907461676!3d28.61429097567463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa3b6014f496f4975%3A0x6bddc6c09e48705d!2sDigital%20Idea%20Force!5e0!3m2!1sen!2sin!4v1742974240131!5m2!1sen!2sin" allowfullscreen="" loading="lazy" title="Digital Idea Force Location"></iframe>
+            
+        </div>
+    </div>
+
+
+
+
+    <!-- now add on footer section -->
+
+
+ <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Digital Idea Force: Your partner in growth and innovation. Crafting strategies that deliver measurable success.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../service.html">Services</a></li>
+          <li><a href="../blog.php">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <a href="mailto:info@digitalideaforce.com?subject=Hello&body=I wanted to get in touch." class="p">info@digitalideaforce.com</a>
+        <a href="mailto:support@digitalideaforce.com?subject=Hello&body=I wanted to get in touch." class="p">support@digitalideaforce.com</a>
+        <a href="https://wa.me/918527161896?text=Hiiii....." target="_blank" class="p1">+91-8527161896</a>
+        <a href="https://wa.me/918882534253?text=Hiiii....." target="_blank" class="p1">+91-8882534253</a>
+        <br>
+        <a href="https://wa.me/918920922884?text=Hiiii....." target="_blank" class="p1">+91-8920922884</a>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/digital_idea_force/?next=%2F"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61557531185649"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/@DIGITALIDEAFORCE"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/company/104130863/admin/dashboard/"><i class="fab fa-linkedin-in"></i></a>
+    </div>    <div class="footer-bottom">
+      <p>&copy; 2025 Digital Idea Force. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- footer end -->
+
+
+  <script src="humberger.js"></script>
+  <script src="theme.js"></script>
+</body>
+</html>

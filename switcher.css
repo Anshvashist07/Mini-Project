@@ -1,0 +1,401 @@
+    /* Theme Switcher Styles */
+    .theme-toggle {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .theme-toggle-btn {
+      position: fixed;
+      top: 200px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px;
+      height: 30px;
+      background: #333;
+      border-radius: 50px;
+      padding: 5px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .theme-switch {
+      display: none;
+    }
+
+    .theme-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 60px;
+      height: 30px;
+      background: #333;
+      border-radius: 50px;
+      padding: 5px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .theme-label i {
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .theme-label .fa-moon {
+      color: #f1c40f;
+    }
+
+    .theme-label .fa-sun {
+      color: #f39c12;
+    }
+
+    .theme-ball {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: #fff;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-switch:checked + .theme-label .theme-ball {
+      transform: translateX(30px);
+    }
+
+    .theme-toggle-btn i {
+      font-size: 16px;
+      color: #fff;
+      z-index: 1;
+    }
+    
+    .theme-toggle-btn .fa-moon {
+      color: #f1c40f;
+    }
+    
+    .theme-toggle-btn .fa-sun {
+      color: #f39c12;
+    }
+    
+    .theme-ball {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      background: #fff;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px;
+      transition: transform 0.3s ease;
+      z-index: 2;
+    }
+    
+    #theme-switch:checked ~ .theme-toggle-btn .theme-ball {
+      transform: translateX(30px);
+    }
+    
+    /* Hide the actual checkbox */
+    #theme-switch {
+      display: none;
+    }
+
+    /* Dark Theme Styles */
+    body.dark-theme {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    body.dark-theme .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+
+    body.dark-theme nav {
+      background: #000000b3;
+    }
+
+    body.dark-theme .service {
+      background-color: #1e1e1e;
+    }
+
+    body.dark-theme .service h1{
+      color: #fff;
+    }
+
+    body.dark-theme .service-card {
+      background-color: #2d2d2d;
+      color: #ffffff;
+    }
+
+    body.dark-theme .service-card .title {
+      color: #ffffff;
+    }
+
+    body.dark-theme .service-card .description {
+      color: #cccccc;
+    }
+
+    body.dark-theme .card_section {
+      background-color: #1e1e1e;
+    }
+
+    body.dark-theme .card_section h1 {
+      color: #ffffff;
+    }
+
+    body.dark-theme .card {
+      background-color: #2d2d2d;
+      color: #ffffff;
+    }
+
+    body.dark-theme .card h2 {
+      color: #ffffff;
+    }
+
+    body.dark-theme .card p {
+      color: #cccccc;
+    }
+
+    body.dark-theme footer {
+      background-color: #121212;
+    }
+
+    body.dark-theme .footer-section p,
+    body.dark-theme .footer-section ul li a {
+      color: #cccccc;
+    }
+
+
+
+
+
+     /* Dark Mode Styles */
+        body.dark-theme {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+        body.dark-theme .contact-details li i{
+          color: #fdc304;
+        }
+
+        body.dark-theme .info-card .social-links a{
+          background-color: #fdc304;
+          color: #000;
+        }
+        
+        .dark-theme .about-card,
+        .dark-theme .team-member,
+        .dark-theme .header {
+            background-color: #1e1e1e !important;
+            color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        .dark-theme .section-title h2,
+        .dark-theme .about-card h3,
+        .dark-theme .member-info h3 {
+            color: #ffffff !important;
+        }
+        
+        .dark-theme .section-title p,
+        .dark-theme .about-card p,
+        .dark-theme .stat-label {
+            color: #b0b0b0 !important;
+        }
+        
+        .dark-theme .team-section {
+            background-color: #1a1a1a !important;
+        }
+
+        body.dark-theme .info-card{
+          background-color: #0e7c77;
+          color: #ffff;
+        }
+        body.dark-theme .info-card h3{
+          color: #fff;
+        }
+        body.dark-theme .info-card h3 i{
+          color: #ffd13a;
+        }
+
+body.dark-theme .contact-container {
+/*  background: #333;*/
+  color: #000;
+}
+
+
+body.dark-theme .form-wrapper {
+  background: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .contact__form label{
+  color: #fff;
+}
+
+
+body.dark-theme .contact__form {
+  background-color: #0e7c77;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .contact__form input,
+body.dark-theme .contact__form textarea,
+body.dark-theme .contact__form select {
+  background-color: #dadada;
+  color: #000;
+  border: 1px solid #555;
+}
+
+body.dark-theme form input:focus,
+body.dark-theme form textarea:focus,
+body.dark-theme form select:focus {
+  border-color: #0e7c77;
+  box-shadow: 0 0 5px rgba(14, 124, 119, 0.7);
+}
+
+/* Dark Theme Button Styles */
+body.dark-theme .contact__form button {
+  background-color: #fdc304;
+  color: #000;
+}
+
+body.dark-theme .contact__form button:hover {
+  background-color: #ffd13a;
+}
+
+
+body.dark-theme #services h2{
+  color: #fff;
+}
+
+body.dark-theme #services .subtitle{
+  color: #dadada;
+}
+
+body.dark-theme #services .service-card::before{
+  background: linear-gradient(90deg, #fdc304, #ffd13a);
+
+}
+
+body.dark-theme #services .service-card h3{
+color: #ffffff;
+}
+
+body.dark-theme #services .service-card p{
+  color: #dadada;
+}
+
+body.dark-theme #services .service-card i{
+  color: #ffd13a;
+}
+
+body.dark-theme #services .service-card a{
+
+  color: #ffd13a;
+}
+
+
+body.dark-theme .testimonials{
+  background-color: #000;
+}
+
+body.dark-theme .testimonial{
+  background-color: #2d2d2d;
+  width: 900px;
+
+}
+
+body.dark-theme .testimonials h2{
+  color: #fff;
+}
+
+body.dark-theme .btn{
+  background-color: #fdc304;
+  color: #000;
+}
+
+body.dark-theme .btn{
+  background-color:#fdc304;
+  
+  color: #000;
+}
+
+body.dark-theme .btn:hover{
+
+  background-color: #ffd13a;
+}
+
+body.dark-theme .service h1::after{
+  background-color: #fdc304;
+}
+
+body.dark-theme .card_section  h1::after{
+  background-color: #fdc304;
+}
+
+body.dark-theme .testimonial_section   h1::after{
+  background-color: #fdc304;
+}
+
+body.dark-theme .testimonial_section a{
+  background-color: #fdc304;
+  color: #000;
+}
+
+body.dark-theme .right_testimonial h4{
+  color: #fdc304;
+
+}
+
+body.dark-theme .right_testimonial .right i{
+/*  color: #fdc304;*/
+   -webkit-text-stroke: 3px #fdc304;
+
+
+}
+
+body.dark-theme .right_testimonial .detials img{
+  border: 2px solid #fdc304;
+}
+
+body.dark-theme .footer-section h3{
+  color:#fdc304 ;
+}
+
+body.dark-theme footer ul li a:hover{
+ color:#fdc304 ;
+}
+
+body.dark-theme footer .social-icons a:hover{
+ color:#fdc304 ;
+}
+
+body.dark-theme .footer-section .p1:hover , body.dark-theme .footer-section .p:hover{
+      color: #fdc304;
+    }
+
+    body.dark-theme .right_testimonial .card1:nth-child(2) {
+            transform: translateY(100px) scale(1); /* Increased vertical spacing */
+            opacity: 1;
+            z-index: 3;
+/*            box-shadow: 0 15px 30px rgba(0, 255, 75, 0.3);*/
+        }
+
+
+/*        popup form theme*/
+
+
+body.dark-theme .pop_up .right-section h2 , body.dark-theme .pop_up .right-section label{
+  color: #000;
+}
+
+body.dark-theme .satisfied_customer h4{
+  color: #fdc304;
+}

@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"
+/>
+ <link rel="stylesheet" type="text/css" href="switcher.css">
+ <style type="text/css">
+          body.dark-theme .header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("assets/home.jpg");
+    }
+
+    body.dark-theme .titile{
+        color: #fdc304;
+    }
+
+    .titile{
+        color:#11d0c7;
+    }
+
+
+/*    whatsapp design start*/
+
+
+/* Font Awesome icon ka size aur color */
+.whatsapp-icon i {
+    font-size: 40px;
+    color: #25D366;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Positioning the icon at the bottom right */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Hover effect for the icon */
+.whatsapp-icon:hover i {
+    transform: scale(1.1);
+}
+
+/* For responsiveness: Adjust the icon size on smaller screens */
+@media (max-width: 768px) {
+    .whatsapp-icon i {
+        font-size: 30px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-icon i {
+        font-size: 25px;
+        padding: 6px;
+    }
+}
+
+
+
+
+
+/*    whatsapp design end*/
+
+
+
+
+
+            .modal {
+            position: fixed;
+
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .modal-content {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 600px;
+    max-width: 700px; /* Increased width */
+    position: relative;
+    overflow: hidden;
+}
+
+
+        /* Left Part - Social Media */
+        .left-section {
+            width: 35%;
+            background-color: #0e7c77;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .left-section h2 {
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: Arial ;
+        }
+          .left-section  .social-icons {
+                display: flex;
+                flex-direction: column; /* Icons + usernames ek column me honge */
+                gap: 15px;
+                align-items: flex-start; /* Left align */
+            }
+
+       .left-section .social-icons a {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Icon aur text ke beech space */
+            font-size: 18px;
+            color: white; /* Ensure text is visible */
+            text-decoration: none;
+/*            font-weight: bold;*/
+            font-family: calibri;
+        }
+.left-section .social-icons a i {
+    font-size: 24px; /* Icons ka size */
+    width: 30px; /* Ensure equal spacing for icons */
+    text-align: center;
+}
+        
+
+.left-section .social-icons a:hover {
+    color: #ddd;
+}
+        /* Right Part - Contact Form */
+        .right-section {
+            width: 65%;
+            padding: 30px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #888;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0e7c77;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #11938d;
+        }
+
+        /* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 15px;
+    }
+
+   .left-section .social-icons {
+        display: grid; /* ✅ Grid layout for equal spacing */
+        grid-template-columns: repeat(2, 1fr); /* ✅ 2 icons per row */
+        gap: 15px; /* ✅ Proper spacing */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 350px; /* ✅ Prevents stretching */
+    }
+
+    .left-section .social-icons a {
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .left-section .social-icons a i {
+        font-size: 20px;
+        text-align: left;
+    }
+ .right-section {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -30px;
+    }
+
+    .right-section h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    /* ✅ FORM in 2 COLUMNS */
+    #contactForm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    /* ✅ Full Width for Select & Message Box */
+    .form-group.full-width {
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    /* ✅ Message box (textarea) FULL WIDTH */
+    #message {
+        width: 200% !important;
+        height: 120px; /* ✅ Adjust height */
+        resize: none; /* ✅ Prevent resizing */
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        grid-column: span 2;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .modal-content {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    /* Left Section: Social Media */
+    .left-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        padding: 15px;
+    }
+
+   .left-section  .social-icons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+    }
+
+   .left-section  .social-icons a {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    .left-section .social-icons a i {
+        font-size: 18px;
+        text-align: left;
+    }
+
+    /* Right Section: Contact Form */
+    .right-section {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-section h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    /* ✅ FORM in 2 COLUMNS */
+    #contactForm {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    /* ✅ Full Width for Select & Message Box */
+    .form-group.full-width {
+        grid-column: span 2;
+        width: 100%;
+    }
+
+    /* ✅ Message box (textarea) FULL WIDTH */
+    #message {
+        width: 200% !important;
+        height: 100px; /* ✅ Adjust height */
+        resize: none; /* ✅ Prevent resizing */
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+        grid-column: span 2;
+    }
+}
+
+
+      </style>
+<body>
+
+    <!-- whatsapp icon  start-->
+
+
+<a href="https://wa.me/917011013046?text=Hello%20I%20need%20support" target="_blank" class="whatsapp-icon">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+    <!-- whatsapp icon end  -->
+
+  <!-- popup form section end-->
+
+
+<!-- dark light mode option start -->
+
+<!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" class="theme-switch">
+
+
+
+    <button type="button" class="theme-toggle-btn" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="theme-ball"></span>
+  </button>
+  </div>
+
+
+<!-- dark light mode option end -->
+<!-- popup form section start-->
+
+    <div id="formModal" class="modal pop_up">
+        <div class="modal-content">
+            <!-- Left Section: Social Media -->
+            <div class="left-section">
+                <h2>Follow Us</h2>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/digital_idea_force/?next=%2F"><i class="fab fa-instagram"></i>@digital_idea_force</a>
+                        <a href="https://www.facebook.com/profile.php?id=61557531185649"><i class="fab fa-facebook"></i>Digital Idea Force</a>
+                        <a href="https://www.youtube.com/@DIGITALIDEAFORCE"><i class="fab fa-youtube"></i>@digitalideaforce</a>
+                        <a href="https://www.linkedin.com/company/104130863/admin/dashboard/"><i class="fab fa-linkedin"></i>@DIGITALIDEAFORCE</a>
+                    </div>
+            </div>
+
+            <!-- Right Section: Contact Form -->
+            <div class="right-section">
+                <span class="close" id="form_close">&times;</span>
+                <h2>Contact Us</h2>
+                <form id="contactForm" method="post" action="wa.php">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone:</label>
+                        <input type="text" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <select id="state" name="state" required>
+                              <option value="Delhi">Delhi</option>
+                              <option value="Andhra Pradesh">Andhra Pradesh</option>
+                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                              <option value="Assam">Assam</option>
+                              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                              <option value="Bihar">Bihar</option>
+                              <option value="Chhattisgarh">Chhattisgarh</option>
+                              <option value="Chandigarh">Chandigarh</option>
+                              <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Gujarat">Gujarat</option>
+                              <option value="Haryana">Haryana</option>
+                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                              <option value="Jharkhand">Jharkhand</option>
+                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                              <option value="Karnataka">Karnataka</option>
+                              <option value="Kerala">Kerala</option>
+                              <option value="Lakshadweep">Lakshadweep</option>
+                              <option value="Ladakh">Ladakh</option>
+                              <option value="Madhya Pradesh">Madhya Pradesh</option>
+                              <option value="Maharashtra">Maharashtra</option>
+                              <option value="Manipur">Manipur</option>
+                              <option value="Meghalaya">Meghalaya</option>
+                              <option value="Mizoram">Mizoram</option>
+                              <option value="Nagaland">Nagaland</option>
+                              <option value="Odisha">Odisha</option>
+                              <option value="Punjab">Punjab</option>
+                              <option value="Puducherry">Puducherry</option>
+                              <option value="Rajasthan">Rajasthan</option>
+                              <option value="Sikkim">Sikkim</option>
+                              <option value="Tamil Nadu">Tamil Nadu</option>
+                              <option value="Telangana">Telangana</option>
+                              <option value="Tripura">Tripura</option>
+                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                              <option value="Uttarakhand">Uttarakhand</option>
+                              <option value="West Bengal">West Bengal</option>
+
+
+                        </select>
+                    </div>
+                    <div class="form-group msg_box">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" id="sub_btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- form section end -->
+  <!-- Header Section -->
+  <section class="header">
+    <nav>
+      <div class="logo_section">
+        <a href="index.html">
+        <img src="assets/dif_logo.png" alt="logo" class="logo1">
+        <img src="assets/dif_logo.png" alt="logo"></a>
+      </div>
+
+      <div class="menu" id="menu">
+        <ul class="nav1">
+          <li><a href="index.html">Home</a><br><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a><br><a href="about.html">About</a></li>
+          <li><a href="service.html">Service</a><br><a href="service.html">Service</a></li>
+          <li><a href="blog.php">Blog</a><br><a href="blog.php">Blog</a></li>
+          <li><a href="contact.html">Contact</a><br><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <h1>Transform Your Online Business with<br><span class="titile">Digital Idea Force</span></h1>
+      <p>Your business needs the best — And we deliver with expert digital marketing strategies.</p>
+    </div>
+  </section>
+  <!-- header section end -->
+
+  <!-- Service Section -->
+  <section class="service">
+    <h1>Our Services</h1>
+    <div class="main-container">
+      <!-- First Row -->
+      <div class="card-container">
+        <div class="service-card left">
+          <div class="icon">
+            <img src="assets/web_learn.png" alt="Service Icon">
+          </div>
+          <h3 class="title">Website Design & Development</h3>
+          <p class="description">Creative High Quality Website Design & Development with mobile friendly</p>
+          <a href="service_information/web_learn.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card right">
+          <div class="icon">
+            <img src="assets/app.jpg" alt="Service Icon">
+          </div>
+          <h3 class="title">App Development</h3>
+          <p class="description">Make Android & IOS App for Your Business</p>
+          <a href="service_information/app_learn.html" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="card-container">
+        <div class="service-card left">
+          <div class="icon">
+            <img src="assets/crm.jpg" alt="Service Icon">
+          </div>
+          <h3 class="title">CRM Development</h3>
+          <p class="description">Custom CRM solutions to streamline customer relationships.</p>
+          <a href="service_information/crm_learn.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card right">
+          <div class="icon">
+            <img src="assets/smm.jpg" alt="Service Icon">
+          </div>
+          <h3 class="title">Social Media Marketing</h3>
+          <p class="description">Let engage your customer every where in world</p>
+          <a href="service_information/media_learn.html" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Third Row -->
+      <div class="card-container">
+        <div class="service-card left">
+          <div class="icon">
+            <img src="assets/ppc.jpg" alt="Service Icon">
+          </div>
+          <h3 class="title">Pay Per Click Advertising / Google Ads</h3>
+          <p class="description">online advertising model where advertisers pay a fee only when a user clicks on their ad, enabling targeted website traffic acquisition.</p>
+          <a href="service_information/ppc_learn.html" class="btn">Learn More</a>
+        </div>
+
+        <div class="service-card right">
+          <div class="icon">
+            <img src="assets/seo.jpg" alt="Service Icon">
+          </div>
+          <h3 class="title">Search engine Optimisation (SEO)</h3>
+          <p class="description">Let engage your customer every where in world</p>
+          <a href="service_information/seo_learn.html" class="btn">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Card Section -->
+  <section class="card_section">
+    <h1>Our Projects</h1>
+    <div class="card">
+      <img src="assets/p1.png" alt="Placeholder Image">
+      <div class="card-content">
+        <h2>Tripper Hub Tour & Travels</h2>
+        <p>Crafted for Tripper Hub by Digital Idea Force — a dynamic travel website built to inspire and convert with stunning visuals and lead generation forms.</p>
+        <a href="https://tripperhub.com/" target="_blank" class="btn">View more</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/al_nutri.png" alt="Placeholder Image">
+      <div class="card-content">
+        <h2>AL Nutrition</h2>
+        <p>Built by Digital Idea Force — a clean and informative website for AL Nutrition, designed to showcase health products and promote wellness with clarity and trust.</p>
+        <a href="https://alnutrition.in/" class="btn">View more</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/p2.png" alt="Placeholder Image">
+      <div class="card-content">
+        <h2>Anndata Farm Fresh</h2>
+        <p>Designed and developed by Digital Idea Force — a clean, authentic platform for a homegrown dairy brand to showcase and sell fresh products online.</p>
+        <a href="https://anndatafarmfresh.com/" class="btn">View more</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/p3.png" alt="Placeholder Image">
+      <div class="card-content">
+        <h2>Lords Recruitment Ltd</h2>
+        <p>Developed by Digital Idea Force for our London-based client — a modern, responsive recruitment platform tailored to connect talent with top UK employers.</p>
+        <a href="https://lordsrecruitmentltd.com/home/" class="btn">View more</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/gs.jpg" alt="Placeholder Image">
+      <div class="card-content">
+        <h2>Gurukul School Social Media Graphics</h2>
+        <p>Delivered educational and engaging visuals tailored for Gurukul School’s digital identity. Designed with impact by Digital Idea Force.</p>
+        <!-- <a href="coming.html" class="btn">Learn More</a> -->
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/mg.jpg" alt="Placeholder Image">
+      <div class="card-content">
+        <h2>Mahawar Garments Social Media Graphics</h2>
+        <p>Developed stylish, brand-aligned graphics to elevate Mahawar Garments' presence on social media. A creative effort by Digital Idea Force.</p>
+        <!-- <a href="coming.html" class="btn">Learn More</a> -->
+      </div>
+    </div>
+  </section>
+
+    <!--- testimonial section start--->
+    <section class="testimonial_section">
+        <h1>Our Testimonial</h1>
+
+        <div class="testimonial_card">
+            <div class="left_testimonial">
+                <h2>Success Stories From Those Who Know Us Best</h2>
+                <p>Success stories reflect the hard work, dedication, and innovation that drive our growth. Through overcoming challenges and seizing opportunities, we've achieved remarkable milestones, making a lasting impact in our field.</p>
+                <a href="about.html">View More</a>
+                <img src="https://images.unsplash.com/photo-1742201408341-29204ea79380?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Team working together">
+
+                <div class="satisfied_customer">
+                    <h2>95%</h2>
+                    <h4>Satisfied Client</h4>
+                    <p>Digital Idea Force ensures success with proven results and happy clients!</p>
+                </div>
+            </div>
+            <div class="right_testimonial">
+                <div class="card1">
+                    <div class="detials">
+                        <div class="left">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ravi Sharma">
+                            <div class="client_name">
+                                <h2>Ravi Sharma</h2>
+                                <h4>client</h4>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                    <div class="discription">
+                        <p>Digital Idea Force helped us establish a strong online presence. Their SEO strategies boosted our website traffic by 150%, and the results were beyond our expectations. A fantastic team to work with!</p>
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <div class="detials">
+                        <div class="left">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Priya Patel">
+                            <div class="client_name">
+                                <h2>Priya Patel</h2>
+                                <h4>client</h4>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                    <div class="discription">
+                        <p>Their web development team transformed our outdated website into a modern, user-friendly platform. The new design increased our conversion rate by 80% within just three months. Highly recommended!</p>
+                    </div>
+                </div>
+
+                <div class="card1">
+                    <div class="detials">
+                        <div class="left">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Amit Kumar">
+                            <div class="client_name">
+                                <h2>Amit Kumar</h2>
+                                <h4>client</h4>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <i class="ri-double-quotes-r"></i>
+                        </div>
+                    </div>
+                    <div class="discription">
+                        <p>The social media campaign they created for us went viral, bringing in thousands of new customers. Their creative approach and data-driven strategies delivered exceptional ROI for our marketing budget.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--- testimonial section end--->
+
+
+  <!-- Footer Section -->
+ <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Digital Idea Force: Your partner in growth and innovation. Crafting strategies that deliver measurable success.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../service.html">Services</a></li>
+          <li><a href="../blog.php">Blog</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <a href="mailto:info@digitalideaforce.com?subject=Hello&body=I wanted to get in touch." class="p">info@digitalideaforce.com</a>
+        <a href="mailto:support@digitalideaforce.com?subject=Hello&body=I wanted to get in touch." class="p">support@digitalideaforce.com</a>
+        <a href="https://wa.me/918527161896?text=Hiiii....." target="_blank" class="p1">+91-8527161896</a>
+        <a href="https://wa.me/918882534253?text=Hiiii....." target="_blank" class="p1">+91-8882534253</a>
+        <br>
+        <a href="https://wa.me/918920922884?text=Hiiii....." target="_blank" class="p1">+91-8920922884</a>
+      </div>
+    </div>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/digital_idea_force/?next=%2F"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61557531185649"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.youtube.com/@DIGITALIDEAFORCE"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/company/104130863/admin/dashboard/"><i class="fab fa-linkedin-in"></i></a>
+    </div>    <div class="footer-bottom">
+      <p>&copy; 2025 Digital Idea Force. All rights reserved.</p>
+    </div>
+</footer>
+
+
+  <script src="theme.js"></script>
+  <script src="script.js"></script>
+  <script src="humberger.js"></script>
+</body>
+</html>
